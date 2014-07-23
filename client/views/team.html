@@ -1,0 +1,78 @@
+<template name="team">
+	{{> menu}}
+	<div class="container">
+		{{#if users}}
+			{{#each users}}
+				{{> user}}
+			{{/each}}
+		{{/if}}	
+	</div>
+</template>
+
+<template name="user">
+	<div class="member {{emailState this.emails}}">
+		<form class="form-member" id="{{this._id}}">
+			{{#if isCheckedUser this.emails}}
+				<input type="hidden" class="isverified" value="{{emailIsVerified this.emails}}">
+			{{/if}}
+			<p>
+				Email : <input value="{{this.profile.email}}">
+			<br>
+
+				Droits :
+				<input type="hidden" name="roles" value="{{this.roles}}">
+				{{> roles}}
+				 {{{displayStatus this.roles}}}
+			<br><br>
+
+
+				{{#if userIsValidate this.emails}}
+					<button class="progress progress-button" data-style="move-up" data-horizontal="" type="submit">
+							<span class="progress-wrap">
+						        <span class="content  fa fa-check">Modifier</span>
+						        <span class="progress">
+						            <span class="progress-inner"></span>
+						        </span>
+						    </span>
+					</button>
+				{{else}}
+					<button class="progress progress-button" data-style="move-up" data-horizontal="" type="submit">
+							<span class="progress-wrap">
+						        <span class="content  fa fa-check">Valider</span>
+						        <span class="progress">
+						            <span class="progress-inner"></span>
+						        </span>
+						    </span>
+					</button>
+				{{/if}}
+
+
+				<button class="suppress">
+					        <span class="content  fa fa-times"> Supprimer</span>
+				</button>
+				<div class="alert">
+					<div class="alert-success alert-success-{{this._id}}"></div>
+				</div>
+			</p>
+		</form>
+	</div>
+</template>
+
+<template name="roles">
+	<div class="input-group">
+      <input type="text" class="form-control display-role" value="{{displayRole this.roles}}">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu"> 	
+          <li><a href="#" class="role" data-role="manage">Administrateur</a></li>
+          <li><a href="#" class="role" data-role="edit">Edition</a></li>
+          <li><a href="#" class="role" data-role="read">Lecture seule</a></li>
+        </ul>
+      </div>
+    </div>
+</template>
+
+
+
+
+

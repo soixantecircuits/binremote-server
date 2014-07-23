@@ -1,0 +1,28 @@
+<template name="remoteDisplay">
+  <table id='{{this._id}}'  class="table table-striped">
+          <thead>
+            <tr>
+              {{#if isInRole 'manage, edit'}}
+                <th>Actions</th>
+              {{/if}}
+              <th>Bin name</th>
+              <th>Last update</th>
+              <th>State</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each bins}}
+              <tr>
+                {{#if isInRole 'manage, edit'}}
+                  <td>
+                    <a href="#" class="start-link fa fa-power-off " alt="run"></a>
+                  </td>
+                {{/if}}
+                <td>{{this.name}}</td>
+                <td>{{this.lastupdate}}</td>
+                <td>{{this.state}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+  </table>
+</template>

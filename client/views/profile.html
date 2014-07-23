@@ -1,0 +1,50 @@
+<template name="profile">
+	{{> menu}}
+	<div class="container">
+		{{#if user}}
+			<h1>Mon compte</h1>
+			<form class="form-profile">
+				<span class="fa fa-envelope"> Email : </span><input class="input-invisible" placeholder="Email" name="profile.email" value="{{user.profile.email}}">
+				<br><br>
+				<span class="fa fa-user"> Nom et prénom : </span><input class="input-invisible" placeholder="Nom" name="profile.last_name" value="{{user.profile.last_name}}">
+																	<input class="input-invisible" placeholder="Prénom" name="profile.first_name" value="{{user.profile.first_name}}">
+				<br><br>
+				<span class="fa fa-phone"> Téléphone : </span><input class="input-invisible" placeholder="Fixe" name="profile.phone" value="{{user.profile.phone}}">
+																<input class="input-invisible" placeholder="Mobile" name="profile.mobile" value="{{user.profile.mobile}}">
+				<br><br>
+				<span class="fa fa-phone"> Adresse : </span><input class="input-invisible" placeholder="N° et nom de la rue" name="profile.adress.street" value="{{user.profile.adress.street}}">
+																<input class="input-invisible" placeholder="Code postal" name="profile.adress.code" value="{{user.profile.adress.code}}">
+																<input class="input-invisible" placeholder="Ville" name="profile.adress.city" value="{{user.profile.adress.city}}">
+				<br><br>
+				<span class="fa fa-phone"> Mot de passe : </span><input class="input-invisible password-actual" type="password" placeholder="Mot de passe actuel">
+																<input class="input-invisible password-reset" type="password" placeholder="Nouveau mot de passe">
+																<input class="input-invisible password-reset-check" type="password" placeholder="Retapez le nouveau mot de passe">
+				<br><br><br><br>
+				
+				<button class="progress progress-button" data-style="move-up" data-horizontal="" type="submit">
+							<span class="progress-wrap">
+						        <span class="content  fa fa-check">Enregistrer</span>
+						        <span class="progress">
+						            <span class="progress-inner"></span>
+						        </span>
+						    </span>
+				</button>
+				<button class="progress progress-button change-password" data-style="move-up" data-horizontal="">
+							<span class="progress-wrap">
+						        <span class="content  fa fa-check">Changer le mot de passe</span>
+						        <span class="progress">
+						            <span class="progress-inner"></span>
+						        </span>
+						    </span>
+				</button>
+				<br><br>
+				<div class="alert">
+					<div class="alert-success"></div>
+					<div class="alert-warning"></div>
+				</div>
+			</form>
+		{{else}}
+
+		{{/if}}
+	</div>
+</template>
