@@ -2,7 +2,8 @@
 	{{> menu}}
 	<div class="container">
 		{{#if user}}
-			<h1>Mon compte</h1>
+			<h1>My account</h1>
+			<h2>{{currentUser.profile.company.name}}</h2>
 			<form class="form-profile">
 				<span class="fa fa-envelope"> Email : </span><input class="input-invisible" placeholder="Email" name="profile.email" value="{{user.profile.email}}">
 				<br><br>
@@ -29,14 +30,14 @@
 						        </span>
 						    </span>
 				</button>
-				<button class="progress progress-button change-password" data-style="move-up" data-horizontal="">
+				<!--<button class="progress progress-button change-password" data-style="move-up" data-horizontal="">
 							<span class="progress-wrap">
 						        <span class="content  fa fa-check">Changer le mot de passe</span>
 						        <span class="progress">
 						            <span class="progress-inner"></span>
 						        </span>
 						    </span>
-				</button>
+				</button>-->
 				<br><br>
 				<div class="alert">
 					<div class="alert-success"></div>
