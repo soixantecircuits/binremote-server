@@ -8,30 +8,3 @@
 	</head>
 	{{> yield}}
 </template>
-
-<template name="menu">
-	<div class="navbar navbar-default" role="navigation">
-	  <div class="navbar-header">
-	    <h1 class="navbar-brand">{{currentUser.profile.company.name}}</h1>
-	  </div>
-	  <div class="navbar-collapse collapse">
-	    <ul class="nav navbar-nav nav-tabs">
-	      	<li class="{{determineClass '/dashboard'}}"><a href="/dashboard"><h1 class="fa fa-home"></h1></a></li>
-	      	{{#if currentUser}}
-				<li class="{{determineClass '/create'}}"><a href="/create"><h1 class="fa fa-plus-square-o"></h1></a></li>
-			{{else}}
-				<li class="{{determineClass '/login'}}"><a href="/login"><h1 class="fa fa-sign-in"></h1></a></li>
-			{{/if}}
-	    </ul>
-	    {{#if currentUser}}
-		    <ul class="nav navbar-nav navbar-right">
-		     {{#if isInRole 'manage'}}
-		     	<li class="{{determineClass '/team'}}"><a href="/team"><h1 class="fa fa-users"></h1></a></li>
-		        <li class="{{determineClass '/options'}}"><a href="/options"><h1 class="fa fa-cogs"></h1></a></li>
-		     {{/if}}
-		        <li><a id="logout" href="/"><h1 class="fa fa-sign-out"></h1></a></li>
-		    </ul>
-		{{/if}}
-	  </div>
-	</div>
-</template>

@@ -50,8 +50,9 @@ Meteor.startup(function() {
     });
 
     Meteor.publish('company', function(user) {
-        console.log(user);
         if(this.userId) {
+            var user = Meteor.users.findOne(this.userId);
+            console.log(user);
             var company = Company.find({
                 group: user.profile.company.group
             });
@@ -62,11 +63,12 @@ Meteor.startup(function() {
     });
 
     Meteor.publish('users', function(user) {
-        if (user) {
+        if(this.userId) {
+            var user = Meteor.users.findOne(this.userId);
+            console.log(user);
             return Meteor.users.find({
                 'profile.company.group': user.profile.company.group
             });
-
         } else {
              console.log("Unauthorized user tried to subscribe to Options");
         }
