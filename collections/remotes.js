@@ -61,8 +61,11 @@ Meteor.methods({
       var setter = {};
         var state = key+'.state';
         var active = key+'.active';
+        var date = key+'.lastupdate';
+
         setter[state] = 'started';
         setter[active] = true;
+        setter[date] = Date.now();
       console.log(setter);  
       Remotes.update({
         _id: id
@@ -81,8 +84,12 @@ Meteor.methods({
         var setter = {};
         var state = key+'.state';
         var active = key+'.active';
+        var date = key+'.lastupdate';
+        
         setter[state] = 'iddle';
         setter[active] = false;
+        setter[date] = Date.now();
+
       console.log(setter);
       Remotes.update({
         _id: id

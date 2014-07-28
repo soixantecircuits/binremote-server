@@ -5,7 +5,6 @@
       "iron-router": {},
       "accounts-ui-bootstrap-3-blaze": {},
       "event-hooks": {},
-      "moment": {},
       "parsleyjs-v2": {},
       "bootstrap3-datetimepicker": {},
       "font-awesome": {},
@@ -28,11 +27,6 @@
         "git": "https://github.com/BenjaminRH/meteor-event-hooks.git",
         "tag": "v1.4.3",
         "commit": "ba4f3d7887748458618d29615492906f0c88d31c"
-      },
-      "moment": {
-        "git": "https://github.com/acreeger/meteor-moment.git",
-        "tag": "v2.6.0",
-        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
       },
       "parsleyjs-v2": {
         "git": "https://github.com/Sewdn/meteor-parsleyjsv2.git",

@@ -28,6 +28,13 @@ Handlebars.registerHelper('key_value', function(context, options) {
     return result;
 });
 
+Handlebars.registerHelper('dateFormat', function(item) {
+    var result = 'no date';
+    lastupdate = moment(item);;
+    result = lastupdate.format('MMMM Do YYYY, h:mm:ss a');
+    return result;
+});
+
 Handlebars.registerHelper('elementExists', function(element) {
     return (element != null || element != undefined) ? element : null;
 });
