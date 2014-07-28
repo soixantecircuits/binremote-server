@@ -1,26 +1,47 @@
 <template name="menu">
-  <div class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-      <h1 class="navbar-brand">{{currentUser.profile.company.name}}</h1>
-    </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav nav-tabs">
-          <li class="{{determineClass '/dashboard'}}"><a href="/dashboard"><h1 class="fa fa-home"></h1></a></li>
+  <nav id="nav-wrap">         
+    <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+    <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>         
+
+         <ul id="nav" class="nav">
+            {{#if currentUser}}
+              {{currentUser.profile.company.name}}
+              {{#if isInRole 'manage'}}
+                <li class="{{determineClass '/team'}}"><a href="/team"><h1 class="fa fa-users"></h1></a></li>
+              <!--<li class="{{determineClass '/options'}}"><a href="/options"><h1 class="fa fa-cogs"></h1></a></li>-->
+              {{/if}}
+            {{else}}
+              {{#if isHome}}
+                <li><a class="smoothscroll" href="#features">Features</a></li>
+                <li><a class="smoothscroll" href="#pricing">Pricing</a></li>
+                <li><a class="smoothscroll" href="#screenshots">Screenshots</a></li>
+                <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
+                <li><a class="smoothscroll" href="#subscribe">Subscribe</a></li>
+              {{/if}}
+            {{/if}}
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <ul class="header-social">
           {{#if currentUser}}
-        <!--<li class="{{determineClass '/create'}}"><a href="/create"><h1 class="fa fa-plus-square-o"></h1></a></li>-->
-      {{else}}
-        <li class="{{determineClass '/login'}}"><a href="/login"><h1>sign in</h1></a></li>
-      {{/if}}
+            <li>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  {{currentUser.profile.first_name}} {{currentUser.profile.last_name}} <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><i class="fa fa-user"></i><a href="/profile">My profile</a></li>
+                  <li class="divider"></li>
+                  <li><a id="logout" href="/"><i class="fa fa-sign-out"></i>Sign out</a></li>
+                </ul>
+              </div>
+            </li>
+          {{else}}
+           <li><a href="/login"><i class="fa"></i>Sign in</a></li>
+           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          {{/if}}
       </ul>
-      {{#if currentUser}}
-        <ul class="nav navbar-nav navbar-right">
-         {{#if isInRole 'manage'}}
-          <li class="{{determineClass '/team'}}"><a href="/team"><h1 class="fa fa-users"></h1></a></li>
-            <!--<li class="{{determineClass '/options'}}"><a href="/options"><h1 class="fa fa-cogs"></h1></a></li>-->
-         {{/if}}
-            <li><a id="logout" href="/"><h1 class="fa fa-sign-out"></h1></a></li>
-        </ul>
-    {{/if}}
-    </div>
-  </div>
 </template>

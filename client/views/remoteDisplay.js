@@ -3,7 +3,7 @@ Template.remoteDisplay.events({
     console.log(el);
     console.log(this);
     //Messages.remove(this._id);
-    var key   = 'bins.'+$(el.currentTarget).closest('tr').index()+'.state';
+    var key   = 'bins.'+$(el.currentTarget).closest('tr').index();
     if(this.state == 'started') {
       Meteor.call('stopRemote', $(el.target).closest('table').attr('id'), key);
     }

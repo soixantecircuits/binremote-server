@@ -2,14 +2,6 @@
 	{{> menu}}
 	<div class="wrapper">
 		<div class="info-dashboard">
-			<div class="dashboard-user">
-				{{#if currentUser}}
-		      	<h4><span class="fa fa-user"></span> {{currentUser.profile.first_name}} {{currentUser.profile.last_name}}</h4>
-		     	 <ul>
-				 	<li><span class="fa fa-angle-right"></span> <a href="/profile">Mon profil</a></li>
-				</ul>
-				{{/if}}
-			</div>
 	  		{{#if remotes}}
 				{{#if isLoaded}}
 					{{#each remotesArray}}

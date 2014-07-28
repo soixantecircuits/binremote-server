@@ -57,9 +57,12 @@ Meteor.methods({
     },
     startRemote: function(id, key) {
       //db.remotes.update({_id: 'XDn7xy4DthS8oE2xs'}, {$set: { 'bins.0.state': 'started'}}, {multi: false,upsert: false});
-      console.log('update({_id: '+id+'}, {$set: { '+key+': '+"started"+'}}, {multi: false,upsert: false});');
+      //console.log('update({_id: '+id+'}, {$set: { '+key+': '+"started"+'}}, {multi: false,upsert: false});');
       var setter = {};
-        setter[key] = 'started';
+        var state = key+'.state';
+        var active = key+'.active';
+        setter[state] = 'started';
+        setter[active] = true;
       console.log(setter);  
       Remotes.update({
         _id: id
@@ -67,7 +70,7 @@ Meteor.methods({
         $set: setter
       }, {
         multi: false,
-        upsert: false
+        upsert: true
       }, function(err, docs) {
         if(err)
             console.log(err);
@@ -75,17 +78,19 @@ Meteor.methods({
       });
     },
     stopRemote: function(id, key) {
-        console.log('update({_id: '+id+'}, {$set: { '+key+': '+"iddle"+'}}, {multi: false,upsert: false});');
         var setter = {};
-        setter[key] = 'iddle';
-
+        var state = key+'.state';
+        var active = key+'.active';
+        setter[state] = 'iddle';
+        setter[active] = false;
+      console.log(setter);
       Remotes.update({
         _id: id
       }, {
         $set: setter
       }, {
         multi: false,
-        upsert: false
+        upsert: true
       }, function(err, docs) {
         if(err)
             console.log(err);

@@ -8,6 +8,7 @@
               <th>Bin name</th>
               <th>Last update</th>
               <th>State</th>
+              <th>Running</th>
             </tr>
           </thead>
           <tbody>
@@ -21,6 +22,13 @@
                 <td>{{this.name}}</td>
                 <td>{{this.lastupdate}}</td>
                 <td>{{this.state}}</td>
+                <td>
+                  {{#if this.active}}
+                    running...
+                  {{else}}
+                    stop
+                  {{/if}}
+                </td>
               </tr>
             {{/each}}
           </tbody>

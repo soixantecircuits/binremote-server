@@ -16,9 +16,11 @@ Template.login.events({
             Meteor.loginWithPassword(user['login-id'], user['login-password'], function(err, res) {
                 if (err) {
                     if (err.reason == 'User not found')
-                        alertMessage('.alert-warning', 'Utilisateur introuvable');
+                        alertMessage('.alert-warning', 'User not found');
                     else if (err.reason == 'Login forbidden')
-                        alertMessage('.alert-warning', 'Le compte n\'a pas encore été validé.');
+                        alertMessage('.alert-warning', 'The account has not been validated');
+                    else 
+                        alertMessage('.alert-warning', 'User or password incorrect');
                 } else {
                     Router.go('/dashboard');
                 }

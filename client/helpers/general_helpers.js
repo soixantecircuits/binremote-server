@@ -3,10 +3,17 @@ Handlebars.registerHelper('show', function(item, optional_msg) {
 });
 
 Handlebars.registerHelper('determineClass', function(item) {
-    if (item == Router.current().path)
+    if (Router.current() != null && item == Router.current().path)
         return "active";
     else
         return "inactive";
+});
+
+Handlebars.registerHelper('isHome', function(item) {
+    if (Router.current() != null &&  Router.current().path == '/')
+        return true;
+    else
+        return false;
 });
 
 Handlebars.registerHelper('key_value', function(context, options) {
