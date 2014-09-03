@@ -10,7 +10,7 @@ Handlebars.registerHelper('determineClass', function(item) {
 });
 
 Handlebars.registerHelper('isHome', function(item) {
-    if (Router.current() != null &&  Router.current().path == '/')
+    if (Router.current() != null &&  (Router.current().path == '/'  || Router.current().path == '' || Router.current().path.indexOf("/#") == 0 ))
         return true;
     else
         return false;

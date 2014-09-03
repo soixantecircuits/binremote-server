@@ -54,10 +54,11 @@
          </div>
 
          <p class="copyright">&copy; 2014 Bin remote | Design by <a title="Styleshout" href="http://www.styleshout.com/">Soixante circuits</a></p>
-
-         <div id="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#hero"><i class="icon-up-open"></i></a>
-         </div>
+         {{#if isHome}}
+            <div id="go-top">
+               <a class="smoothscroll" title="Back to Top" href="#hero"><i class="icon-up-open"></i></a>
+            </div>
+         {{/if}}
 
       </div> <!-- Row End -->
 
