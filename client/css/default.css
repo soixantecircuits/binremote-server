@@ -115,6 +115,10 @@ pre {
    word-wrap: break-word;
 }
 
+a, a:hover{
+  text-decoration: none;
+}
+
 blockquote, q { quotes: &#8220 &#8220; }
 
 blockquote:before, blockquote:after,
@@ -168,7 +172,7 @@ html { font-size: 62.5%; }
 
 body {
    background: #fff;
-   font-family: 'opensans-regular', sans-serif;
+   font-family: 'Source Sans Pro', sans-serif;
    font-weight: normal;
    font-size: 15px;
    line-height: 30px;
@@ -184,7 +188,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
    color: #313131;
-	font-family: 'montserrat-bold', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
    font-weight: normal;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
@@ -381,7 +385,7 @@ li p { }
 	display: block;
 	margin: 6px 0 0 0;
 	font-size: 13px;
-	font-family: 'opensans-regular', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
    color: #8B9798;
 }
 
@@ -600,7 +604,7 @@ legend {
 label span,
 legend span {
 	color: #8B9798;
-   font: 14px/24px 'opensans-regular', sans-serif;
+   font: 14px/24px 'Source Sans Pro', sans-serif;
 }
 
 input[type="checkbox"],
