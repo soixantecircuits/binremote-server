@@ -1,19 +1,20 @@
 Template.home.rendered = function() {
+  $("#status, #preloader").css({'display': 'none'});
   /*---------------------------------------------------- */
   /* Preloader
    ------------------------------------------------------ */
   $(window).load(function() {
 
     // will first fade out the loading animation 
-    $("#status").fadeOut("slow");
+//    $("#status").fadeOut("slow");
 
     // will fade out the whole DIV that covers the website. 
-    $("#preloader").delay(500).fadeOut("slow").remove();
+//    $("#preloader").delay(500).fadeOut("slow").remove();
 
     $('.js #hero .hero-image img').addClass("animated fadeInUpBig");
     $('.js #hero .buttons a.trial').addClass("animated shake");
 
-  })
+  });
 
 
   /*---------------------------------------------------- */
@@ -52,14 +53,14 @@ Template.home.rendered = function() {
   /*----------------------------------------------------*/
   /* FitText Settings
     ------------------------------------------------------ */
-  setTimeout(function() {
-
-    $('h1.responsive-headline').fitText(1.2, {
-      minFontSize: '25px',
-      maxFontSize: '40px'
-    });
-
-  }, 100);
+//  setTimeout(function() {
+//
+//    $('h1.responsive-headline').fitText(1.2, {
+//      minFontSize: '25px',
+//      maxFontSize: '40px'
+//    });
+//
+//  }, 100);
 
 
   /*----------------------------------------------------*/
@@ -270,4 +271,25 @@ Template.home.rendered = function() {
     });
 
   }
+
+
+  function resizeHeaderIllustration(){
+    var headerIllustrationWidth = 1280,
+      headerIllustrationHeight = 356;
+    $('#header-illustration').animate({
+      'height': $('#header-illustration').width()*headerIllustrationHeight/headerIllustrationWidth,
+      'margin-top': - $('#header-illustration').width()*headerIllustrationHeight/headerIllustrationWidth*0.3
+    }, 100);
+  }
+  function handleHeaderIllustrationResize(){
+    resizeHeaderIllustration();
+    // Minified: only 160 bytes!
+    function debounce(a,b,c){var d;return function(){var e=this,f=arguments;clearTimeout(d),d=setTimeout(function(){d=null,c||a.apply(e,f)},b),c&&!d&&a.apply(e,f)}}
+    var myEfficientFn = debounce(function() {
+      resizeHeaderIllustration()
+    }, 250);
+    window.addEventListener('resize', myEfficientFn);
+  }
+
+  handleHeaderIllustrationResize();
 }
