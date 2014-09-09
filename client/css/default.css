@@ -307,11 +307,12 @@ abbr:hover { cursor: help; }
   margin: 0;
   padding: 14px 6px 0 0;
   font-size: 84px;
-  font-family: /* Copperplate */ 'montserrat-bold', sans-serif;
+  font-family: /* Copperplate */ 'Source Sans Pro', sans-serif;
   line-height: 60px;
   text-indent: 0;
   background: transparent;
   color: inherit;
+  font-weight: 700;
 }
 
 hr { border: solid #E8E8E8; border-width: 1px 0 0; clear: both; margin: 11px 0 30px; height: 0; }
@@ -498,7 +499,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  font: 14px/24px 'montserrat-bold', sans-serif;
+  font: 14px/24px 'Source Sans Pro', sans-serif;
   background: #11ABB0;
   color: #fff;
   display: inline-block;
@@ -511,6 +512,7 @@ input[type="button"] {
   height: auto;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-weight: 700;
 
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;

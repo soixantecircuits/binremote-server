@@ -33,7 +33,7 @@ body { background: #54bfab }
   text-align: center;
 }
 .section-head h1 {
-  font: 28px/36px 'Source Sans Pro', sans-serif;
+  font: 25px/36px 'Source Sans Pro', sans-serif;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -210,7 +210,7 @@ ul#nav li.current a { color: #fff; }
 .hero-text h1 span,
 .hero-text a { color: #11ABB0; }
 .hero-text p {
-  color: #000000;
+  color: #23292F;
   font: 16px/30px 'Source Sans Pro', sans-serif;
   padding: 0;
   margin: 12px 8% 50px;
@@ -236,11 +236,12 @@ ul#nav li.current a { color: #fff; }
   font: 14px/24px 'Source Sans Pro', sans-serif;
   text-transform : uppercase;
   letter-spacing: 2px;
+  font-weight: 600;
 }
 #hero .buttons .trial {
   background: #f64b39;
   margin-right: 30px;
-  color: #000000;
+  color: #23292F;
   -webkit-animation-delay: 10s;
   -moz-animation-delay: 10s;
   -ms-animation-delay: 10s;
@@ -283,7 +284,7 @@ ul#nav li.current a { color: #fff; }
 }
 #hero .buttons .learn-more:hover {
   background-color: #e7e7e7;
-  color: #000000;
+  color: #23292F;
 }
 
 /* ------------------------------------------------------------------ */
@@ -530,7 +531,7 @@ ul.features li:nth-child(even) { }
 
 #call-to-action {
   background: #23292F;
-  padding-top: 72px;
+  padding-top: 48px;
   padding-bottom: 48px;
 }
 #call-to-action h1 {
@@ -551,15 +552,39 @@ ul.features li:nth-child(even) { }
   float: right;
   color: #EBEEEE;
 }
-#call-to-action .action { margin-top: 18px; }
-#call-to-action .action .button { text-align: center; }
+#call-to-action .action {
+  margin-top: 35px;
+}
+#call-to-action .action .button {
+  text-align: center;
+  padding: 22px 30px 22px 60px;
+  letter-spacing: 0px;
+  font-size: 17px;
+  text-transform: none;
+  background: #1fbba6;
+}
+#call-to-action .action .button:hover{
+  background: #11ABB0
+}
+#call-to-action .action .button:after {
+  content: '';
+  height: 23px;
+  width: 20px;
+  top: 22px;
+  left: 50px;
+  position: absolute;
+  background: url(/images/home/download_icon.png) no-repeat center center;
+  background-size: contain;
+  display: block;
+}
 #call-to-action h2 {
   font: 28px/36px 'Source Sans Pro', sans-serif;
   color: #EBEEEE;
   margin-bottom: 12px;
 }
 #call-to-action h2 a {
-  color: inherit;
+  color: #f7f7f7;;
+  font-weight: 600;
 }
 #call-to-action p {
   color: #697B8B;
@@ -573,9 +598,53 @@ ul.features li:nth-child(even) { }
 #call-to-action .download-icon{
   height: 140px;
   width: 139px;
-  background: url(/images/home/download_badge.png) no-repeat center center;
+  display: block;
+  -moz-border-radius: 68px / 69px;
+  -webkit-border-radius: 68px / 69px;
+  border-radius: 68px / 69px; /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; /* prevents bg color from leaking outside the border */
+  background-color: #313945; /* layer fill content */
+  -moz-box-shadow: -2px 4px 0 rgba(0,0,0,.12); /* drop shadow */
+  -webkit-box-shadow: -2px 4px 0 rgba(0,0,0,.12); /* drop shadow */
+  box-shadow: -2px 4px 0 rgba(0,0,0,.12); /* drop shadow */
+
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#call-to-action .download-icon:hover{
+  background-color: #475763;
+}
+#call-to-action .download-icon:after{
+  content: '';
+  height: 23px;
+  width: 20px;
+  top: 42px;
+  left: 76px;
+  position: absolute;
+  background: url(/images/home/download_icon.png) no-repeat center center;
   background-size: contain;
   display: block;
+}
+#call-to-action .download-icon span{
+  color: #ffffff;
+  margin: 0 auto;
+  font-size: 25px;
+  padding-top: 70px;
+  display: block;
+  text-align: center;
+  background-color: transparent;
+}
+#call-to-action .text-wrapper{
+  padding-top: 30px;
 }
 
 
