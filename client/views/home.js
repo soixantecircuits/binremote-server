@@ -275,10 +275,11 @@ Template.home.rendered = function() {
 
   function resizeHeaderIllustration(){
     var headerIllustrationWidth = 1280,
-      headerIllustrationHeight = 356;
+      headerIllustrationHeight = 356,
+      marginTopRatio = 0.27;
     $('#header-illustration').animate({
-      'height': $('#header-illustration').width()*headerIllustrationHeight/headerIllustrationWidth,
-      'margin-top': - $('#header-illustration').width()*headerIllustrationHeight/headerIllustrationWidth*0.3
+      'height': $('#header-illustration').width() * headerIllustrationHeight / headerIllustrationWidth,
+      'margin-top': - $('#header-illustration').width() * headerIllustrationHeight / headerIllustrationWidth * marginTopRatio
     }, 100);
   }
   function handleHeaderIllustrationResize(){

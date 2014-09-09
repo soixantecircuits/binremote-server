@@ -33,11 +33,12 @@ body { background: #54bfab }
   text-align: center;
 }
 .section-head h1 {
-  font: 20px/36px 'montserrat-bold', sans-serif;
+  font: 28px/36px 'Source Sans Pro', sans-serif;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 12px;
+  font-weight: 700;
 }
 
 /* for css animations */
@@ -212,7 +213,7 @@ ul#nav li.current a { color: #fff; }
   color: #000000;
   font: 16px/30px 'Source Sans Pro', sans-serif;
   padding: 0;
-  margin: 12px 8% 0;
+  margin: 12px 8% 50px;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
 }
 
@@ -232,7 +233,7 @@ ul#nav li.current a { color: #fff; }
   margin: 0 0 18px 0;
 }
 #hero .buttons .button {
-  font: 14px/24px 'montserrat-bold', sans-serif;
+  font: 14px/24px 'Source Sans Pro', sans-serif;
   text-transform : uppercase;
   letter-spacing: 2px;
 }
@@ -292,11 +293,15 @@ ul#nav li.current a { color: #fff; }
 #header-illustration{
   height: 356px;
   margin-top: -150px;
-  background: url(images/illu_header_sitepromo.png) no-repeat center bottom;
+  background: url(images/home/illu_header_sitepromo.png) no-repeat center bottom;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
+}
+
+#header-illustration hr{
+  height: 10px;
 }
 
 
@@ -309,6 +314,7 @@ ul#nav li.current a { color: #fff; }
   padding-top: 96px;
   padding-bottom: 78px;
   overflow: hidden;
+  border-top: solid 12px #e76f55;
 }
 #features .feature {
   margin-top: 30px;
@@ -323,7 +329,8 @@ ul#nav li.current a { color: #fff; }
   float: left;
 }
 #features h3 {
-  font: 16px/24px 'montserrat-bold', sans-serif;
+  font: 16px/24px 'Source Sans Pro', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #222;
@@ -337,11 +344,14 @@ ul#nav li.current a { color: #fff; }
 
 #pricing {
   background: #F7F7F7;
-  padding-top: 107px;
+  padding-top: 70px;
   padding-bottom: 77px;
   border-top: 1px solid #F0F0F0;
   border-bottom: 1px solid #F0F0F0;
   text-align: center;
+}
+#pricing .pricing-head-title{
+  margin-bottom: 50px;
 }
 #pricing .price-block {
   background: #fff;
@@ -363,7 +373,7 @@ ul#nav li.current a { color: #fff; }
   font-size: 26px;
 }
 .plan-price {
-  font-family: 'montserrat-bold', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
   color: #333;
   padding: 6px 30px 6px 30px;
@@ -396,7 +406,7 @@ ul.features li:nth-child(even) { }
   text-align: center;
 }
 .plan-sign-up .button {
-  font: 13px/24px 'montserrat-bold', sans-serif;
+  font: 13px/24px 'Source Sans Pro', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -524,7 +534,7 @@ ul.features li:nth-child(even) { }
   padding-bottom: 48px;
 }
 #call-to-action h1 {
-  font: 18px/24px 'montserrat-bold', sans-serif;
+  font: 18px/24px 'Source Sans Pro', sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #fff;
@@ -544,7 +554,7 @@ ul.features li:nth-child(even) { }
 #call-to-action .action { margin-top: 18px; }
 #call-to-action .action .button { text-align: center; }
 #call-to-action h2 {
-  font: 28px/36px 'montserrat-bold', sans-serif;
+  font: 28px/36px 'Source Sans Pro', sans-serif;
   color: #EBEEEE;
   margin-bottom: 12px;
 }
@@ -557,8 +567,15 @@ ul.features li:nth-child(even) { }
   padding-right: 5px;
 }
 #call-to-action p span {
-  font-family: 'opensans-semibold', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #A9B5C0;
+}
+#call-to-action .download-icon{
+  height: 140px;
+  width: 139px;
+  background: url(/images/home/download_badge.png) no-repeat center center;
+  background-size: contain;
+  display: block;
 }
 
 
@@ -605,7 +622,7 @@ ul.features li:nth-child(even) { }
   margin: 0 auto;
 }
 #testimonials h1 {
-  font: 16px/24px 'montserrat-bold', sans-serif;
+  font: 16px/24px 'Source Sans Pro', sans-serif;
   color: #6AECF0;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -620,7 +637,7 @@ ul.features li:nth-child(even) { }
 }
 #testimonials blockquote:before { content: none; }
 #testimonials blockquote p {
-  font-family: 'opensans-semibold', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
   color: #fff;
   padding: 0;
@@ -818,7 +835,7 @@ footer .right-cols .columns {
 footer .right-cols .columns p { margin-bottom: 6px; }
 
 footer h3 {
-  font: 13px/24px 'opensans-semibold', sans-serif;
+  font: 13px/24px 'Source Sans Pro', sans-serif;
   margin-bottom: 0;
   font-weight: normal;
   color: #fff;
