@@ -1,5 +1,5 @@
 Template.home.rendered = function() {
-  $("#status, #preloader").css({'display': 'none'});
+
   /*---------------------------------------------------- */
   /* Preloader
    ------------------------------------------------------ */
@@ -10,12 +10,14 @@ Template.home.rendered = function() {
 
     // will fade out the whole DIV that covers the website. 
 //    $("#preloader").delay(500).fadeOut("slow").remove();
-
     $('.js #hero .hero-image img').addClass("animated fadeInUpBig");
     $('.js #hero .buttons a.trial').addClass("animated shake");
 
   });
 
+  setTimeout(function(){
+    $("#status, #preloader").fadeOut();
+  }, 1000);
 
   /*---------------------------------------------------- */
   /* Mobile Menu
@@ -26,7 +28,7 @@ Template.home.rendered = function() {
     title: "Menu",
     href: "#"
   });
-  var nav_wrap = $('nav#nav-wrap')
+  var nav_wrap = $('nav#nav-wrap');
   var nav = $("ul#nav");
 
   /* id JS is enabled, remove the two a.mobile-btns 
@@ -79,6 +81,18 @@ Template.home.rendered = function() {
       });
     }
   });
+
+  if (document.location.hash != '' && $(document.location.hash) != undefined){
+    var target = document.location.hash,
+      $target = $(target);
+    setTimeout(function(){
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 800, 'swing', function() {
+        window.location.hash = target;
+      });
+    }, 800);
+  }
 
 
 
