@@ -57,7 +57,7 @@ body { background: #54bfab }
 /* ------------------------------------------------------------------ */
 
 header {
-  height: 54px;
+  height: 58px;
   width: 100%;
   background: #13171B;
   position: fixed;
@@ -85,8 +85,7 @@ header .logo a {
   padding: 0;
   border: none;
   outline: none;
-  width: 64px;
-  height: 18px;
+  width: 125px;
 }
 
 /* header social */
@@ -127,7 +126,7 @@ header .header-social li a:hover { color: #11ABB0; }
 #nav-wrap > a { display: none; }
 
 ul#nav {
-  min-height: 54px;
+  min-height: 58px;
   width: auto;
 
   /* left align the menu */
@@ -136,7 +135,7 @@ ul#nav {
 ul#nav li {
   position: relative;
   list-style: none;
-  height: 54px;
+  height: 58px;
   display: inline-block;
 
 }
@@ -146,7 +145,7 @@ ul#nav li a {
 
   /* 8px padding top + 8px padding bottom + 38px line-height = 54px */
   display: inline-block;
-  padding: 8px 8px;
+  padding: 10px 22px;
   line-height: 38px;
   text-decoration: none;
   text-align: left;
