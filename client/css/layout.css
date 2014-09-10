@@ -48,6 +48,9 @@ body { background: #54bfab }
   opacity: 1;
 }
 
+.button {
+  white-space: nowrap;
+}
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -894,51 +897,86 @@ footer {
   font-size: 13px;
   line-height: 24px;
   position: relative;
+  background: #181d21;
+}
+
+footer .container{
+  margin-top: -40px;
 }
 
 footer a, footer a:visited { color: #0A6567; }
 footer a:hover, footer a:focus { color: #fff; }
 
-footer .info { padding-right: 90px; }
+footer .info {
+  padding-right: 90px;
+  margin-top: 40px;
+}
 
+footer .info p{
+  font-weight: 500;
+  font-size: 13px;
+}
+
+footer .footer-logo{
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
 footer .footer-logo a {
   display: block;
-  margin-bottom: 12px;
   margin-top: 12px;
   margin-left: 3px;
 }
 footer .footer-logo a img {
-  height: 24px;
-  width: 92px;
+  height: 26px;
+  width: 155px;
 }
 
 footer .right-cols .columns {
   padding-right: 5px;
   padding-left: 5px;
-  width: 33.33333%; ;
+  width: 33.33333%;
+  margin-top: 40px;
 }
-footer .right-cols .columns p { margin-bottom: 6px; }
+footer .right-cols .columns p {
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 13px;
+}
 
 footer h3 {
   font: 13px/24px 'Source Sans Pro', sans-serif;
-  margin-bottom: 0;
-  font-weight: normal;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 footer h3:before {
-  font-family: 'FontAwesome';
+  /*font-family: 'FontAwesome';*/
   margin: 0 0 6px 3px;
-  font-size: 30px;
-  line-height: 48px;
-  text-align: left;
   color: #738291;
   display: block;
+  position: absolute;
+  top: -25px;
 }
-footer h3.address:before { content: "\f041"; }
-footer h3.social:before { content: "\f0c0"; }
-footer h3.contact:before { content: "\f0e0"; }
+footer h3.address:before {
+  width: 15px;
+  content: "";
+  background-image: url(images/home/pin_footer.png);
+  height:19px;
+}
+footer h3.social:before {
+  width: 20px;
+  content: "";
+  background-image: url(images/home/socialize_footer.png);
+  height:19px;
+}
+footer h3.contact:before {
+  width: 20px;
+  content: "";
+  background-image: url(images/home/contactus_footer.png);
+  height:15px;
+}
 
 footer ul {
   margin: 0;

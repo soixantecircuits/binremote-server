@@ -168,7 +168,10 @@ table {
   box-sizing: border-box;
 }
 
-html { font-size: 62.5%; }
+html {
+  font-size: 62.5%;
+  background: #181d21;
+}
 
 body {
   background: #fff;
@@ -755,6 +758,9 @@ properly.
 --------------------------------------------------------------- */
 @media only screen and (max-width: 767px) {
 
+  footer h3{
+    margin-bottom: 0!important;
+  }
   .row {
     width: 480px;
     margin: 0 auto;
@@ -791,7 +797,6 @@ properly.
 @media only screen and (max-width: 480px) {
 
   .row { width: auto; }
-
 }
 
 /* larger screens
