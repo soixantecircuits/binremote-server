@@ -67,7 +67,7 @@ Template.home.rendered = function() {
   /* Smooth Scrolling
     ------------------------------------------------------ */
   $('.smoothscroll').on('click', function(e) {
-    if (document.location.pathname == '' && document.location.pathname == '/') {
+    if (document.location.pathname == '' || document.location.pathname == '/') {
       e.preventDefault();
       var target = this.hash,
         $target = $(target);
@@ -140,12 +140,12 @@ Template.home.rendered = function() {
     offset: 'bottom-in-view'
   });
 
-  $('.js #subscribe').waypoint(function() {
-    $('.js #subscribe input[type="email"]').addClass('animated fadeInLeftBig show');
-    $('.js #subscribe input[type="submit"]').addClass('animated fadeInRightBig show');
-  }, {
-    offset: 'bottom-in-view'
-  });
+//  $('.js #subscribe').waypoint(function() {
+//    $('.js #subscribe input[type="email"]').addClass('animated fadeInLeftBig show');
+//    $('.js #subscribe input[type="submit"]').addClass('animated fadeInRightBig show');
+//  }, {
+//    offset: 'bottom-in-view'
+//  });
 
 
   /*----------------------------------------------------*/
@@ -160,7 +160,7 @@ Template.home.rendered = function() {
     smoothHeight: true,
     slideshowSpeed: 7000,
     animationSpeed: 600,
-    randomize: false,
+    randomize: false
   });
 
 
@@ -203,7 +203,9 @@ Template.home.rendered = function() {
       captionOff = function() {
         $('#imagelightbox-caption').remove();
       };
-
+    $('a[data-imagelightbox="a"]').click(function(event){
+       event.preventDefault();
+    });
     var instanceA = $('a[data-imagelightbox="a"]').imageLightbox({
       onStart: function() {
         overlayOn();
@@ -220,7 +222,7 @@ Template.home.rendered = function() {
         activityIndicatorOn();
       },
       onLoadEnd: function() {
-        captionOn();
+//        captionOn();
         activityIndicatorOff();
       }
 
