@@ -33,7 +33,7 @@ body { background: #54bfab }
   text-align: center;
 }
 .section-head h1 {
-  font: 25px/36px 'Source Sans Pro', sans-serif;
+  font: 23px/36px 'Source Sans Pro', sans-serif;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -45,7 +45,7 @@ body { background: #54bfab }
 .show { opacity: 1; }
 .js #mc_embed_signup input[type="email"],
 .js #mc_embed_signup input[type="submit"] {
-  opacity: 0;
+  opacity: 1;
 }
 
 
@@ -805,7 +805,7 @@ ul.features li:nth-child(even) { }
 /* ------------------------------------------------------------------ */
 
 #subscribe {
-  background: #23292F;
+  background: #23292f;
   padding-top: 96px;
   padding-bottom: 66px;
   overflow: hidden;
@@ -817,17 +817,29 @@ ul.features li:nth-child(even) { }
 
 #subscribe h1 { color: #fff; }
 #subscribe p {
-  color: #7A7A7A;
+  color: #dbdbdc;;
   text-align: center;
   padding: 0;
+  width: 450px;
+  margin: 0 auto;
+}
+
+#subscribe small{
+  color: #515f6d;
 }
 
 /* mailchimp signup form */
+.illustration-mountain{
+  width: 390px;
+  height: 68px;
+  background: url(images/home/mountains.png) no-repeat right center;
+  margin: 0 auto;
+}
 #mc_embed_signup {
   background: none;
   clear: both;
   display: block;
-  margin: 6px auto 30px auto;
+  margin: -2px auto 30px auto;
   width: 70%;
   text-align: center;
 }
@@ -839,26 +851,35 @@ ul.features li:nth-child(even) { }
 #mc_embed_signup:after {
   clear: both;
 }
-#mc_embed_signup input[type="submit"] {
-  float: right;
-  height: 60px;
-  margin: 0;
-  padding: 0 20px;
-  font-size: 16px;
-  line-height: 60px;
-  width: 47%;
+#mc_embed_signup form{
+  width: 425px;
+  margin: 0 auto;
+}
+#mc_embed_signup input{
+  border-radius: 0px;
 }
 #mc_embed_signup input[type="email"] {
-  display: inline;
   float: left;
+  width: 270px;
+  display: inline;
   height: 60px;
   margin: 0;
   padding: 18px 20px;
   font-size: 18px;
   line-height: 24px;
   font-family: 'Source Sans Pro',sans-serif;
-  width: 47%;
   text-align: center;
+  background: #ffffff;
+}
+#mc_embed_signup input[type="submit"] {
+  float: left;
+  width: 150px;
+  height: 60px;
+  margin: 0;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 60px;
+  background: #e86f56;
 }
 
 
