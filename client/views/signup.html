@@ -1,62 +1,64 @@
 <template name="signup">
-    {{> menu}}
+  {{> menu}}
   <div class="signup container">
+    <div class="main-window signup" >
+      <div class="login-bg"></div>
+      <form id="signup-form" class="form-horizontal" role="form" action="action">
+        <fieldset>
+          <div class="form-group">
+            <label for="signup-company" class="col-sm-2 control-label">Nom de l'entreprise</label>
+            <div class="col-sm-10">
+              <input type="text" name="signup-company" placeholder="Nom de l'entreprise"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="signup-email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text" name="signup-email" placeholder="Votre email"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="signup-password" class="col-sm-2 control-label">Mot de passe</label>
+            <div class="col-sm-10">
+              <input type="password" name="signup-password" placeholder="Votre mot de passe"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="signup-password-confirm" class="col-sm-2 control-label">Confirmation du mot passe</label>
+            <div class="col-sm-10">
+              <input type="password" name="signup-password-confirm" placeholder="Confirmez le mot de passe"/>
+            </div>
+          </div>
+          <div class="col-sm-10">
+            <input class="btn btn-primary" type="submit" id="signup-button" value="S'inscrire" />
+          </div>
+        </fieldset>
 
-    <form id="signup-form" class="form-horizontal" role="form" action="action">
-      <fieldset>
-      	<div class="form-group">
-		    <label for="signup-company" class="col-sm-2 control-label">Nom de l'entreprise</label>
-		    <div class="col-sm-10">
-		    	<input type="text" name="signup-company" placeholder="Nom de l'entreprise"/>
-		    </div>
-		</div>
-		<div class="form-group">
-		    <label for="signup-email" class="col-sm-2 control-label">Email</label>
-		    <div class="col-sm-10">
-		      <input type="text" name="signup-email" placeholder="Votre email"/>
-		    </div>
-		</div>
-        <div class="form-group">
-		    <label for="signup-password" class="col-sm-2 control-label">Mot de passe</label>
-		    <div class="col-sm-10">
-		    	<input type="password" name="signup-password" placeholder="Votre mot de passe"/>
-		    </div>
-		</div>
-		<div class="form-group">
-		    <label for="signup-password-confirm" class="col-sm-2 control-label">Confirmation du mot passe</label>
-		    <div class="col-sm-10">
-		    	<input type="password" name="signup-password-confirm" placeholder="Confirmez le mot de passe"/>
-		    </div>
-		</div>
-		<div class="col-sm-10">
-		    <input class="btn btn-primary" type="submit" id="signup-button" value="S'inscrire" />
-		</div>
-     </fieldset>
-
-     <div class="alert">
-		<div class="alert-warning"></div>
-		<div class="alert-success">
-		</div>    
-		<br>
-		<div id="circular3dG" class="hide">
-				<div id="circular3d_1G" class="circular3dG">
-				</div>
-				<div id="circular3d_2G" class="circular3dG">
-				</div>
-				<div id="circular3d_3G" class="circular3dG">
-				</div>
-				<div id="circular3d_4G" class="circular3dG">
-				</div>
-				<div id="circular3d_5G" class="circular3dG">
-				</div>
-				<div id="circular3d_6G" class="circular3dG">
-				</div>
-				<div id="circular3d_7G" class="circular3dG">
-				</div>
-				<div id="circular3d_8G" class="circular3dG">
-				</div>
-			</div> 	
-     	</div>
-   </form>
+        <div class="alert">
+          <div class="alert-warning"></div>
+          <div class="alert-success">
+          </div>
+          <br>
+          <div id="circular3dG" class="hide">
+            <div id="circular3d_1G" class="circular3dG">
+            </div>
+            <div id="circular3d_2G" class="circular3dG">
+            </div>
+            <div id="circular3d_3G" class="circular3dG">
+            </div>
+            <div id="circular3d_4G" class="circular3dG">
+            </div>
+            <div id="circular3d_5G" class="circular3dG">
+            </div>
+            <div id="circular3d_6G" class="circular3dG">
+            </div>
+            <div id="circular3d_7G" class="circular3dG">
+            </div>
+            <div id="circular3d_8G" class="circular3dG">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </template>

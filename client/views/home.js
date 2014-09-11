@@ -5,7 +5,7 @@ Template.home.rendered = function() {
     $('#hero .buttons .trial').addClass("animated fadeInLeft");
     $('#hero .buttons .login').addClass("animated fadeInUp");
     $('#header-illustration').addClass("animated fadeInUp");
-    $('footer').addClass("animated fadeIn");
+
   }, 500) ;
 
   var download_link = '',
