@@ -1,13 +1,4 @@
 Template.home.rendered = function() {
-
-  /*---------------------------------------------------- */
-  /* Preloader
-   ------------------------------------------------------ */
-
-  setTimeout(function(){
-    $('#preloader').fadeOut();
-  }, 100) ;
-
   setTimeout(function(){
 
     $('#hero .buttons .learn-more').addClass("animated fadeInRight");

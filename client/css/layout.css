@@ -1178,3 +1178,11 @@ a#imagelightbox-close:hover, a#imagelightbox-close:focus { color: #11ABB0; }
 .login.container{
   margin-top: 58px;
 }
+
+/* ------------------------------------------------------------------ */
+/* Signup
+/* ------------------------------------------------------------------ */
+
+.signup.container{
+  margin-top: 58px;
+}

@@ -1,9 +1,3 @@
-Template.login.rendered = function() {
-  setTimeout(function(){
-    $('#preloader').fadeOut();
-  }, 100) ;
-};
-
 Template.login.events({
   'submit #login-form': function(e, t) {
     e.preventDefault();
