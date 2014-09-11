@@ -179,18 +179,6 @@ ul#nav li.current a { color: #fff; }
   overflow: hidden;
 }
 
-/* For high-res devices */
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-
-  #hero {
-    background: #23292f url(img/hero-bg_@2X.png);
-    background-size: 200px 200px;
-  }
-
-}
-
 #hero .row { max-width: 1040px; }
 
 /* Hero Text */
@@ -438,18 +426,6 @@ ul.features li:nth-child(even) { }
   padding-bottom: 120px;
 }
 
-/* For high-res devices */
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-
-  #screenshots {
-    background: #fff url(img/grey_@2X.png);
-    background-size: 397px 322px;
-  }
-
-}
-
 /* Portfolio Content */
 #screenshots-wrapper .columns { padding: 0; }
 .item .item-wrap {
@@ -679,17 +655,6 @@ ul.features li:nth-child(even) { }
   text-align: center;
 }
 
-/* For high-res devices */
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-
-  #testimonials {
-    background: #10999E url(img/escheresque_@2X.png);
-    background-size: 46px 29px;
-  }
-
-}
 #testimonials .text-container {
   width: 86%;
   margin: 0 auto;
@@ -926,7 +891,8 @@ footer {
 }
 
 footer .container{
-  margin-top: -40px;
+  /*margin-top: -40px;*/
+  padding-top: 58px;
 }
 
 footer a, footer a:visited { color: #0A6567; }
