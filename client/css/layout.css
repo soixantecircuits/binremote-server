@@ -891,8 +891,7 @@ footer {
 }
 
 footer .container{
-  /*margin-top: -40px;*/
-  padding-top: 58px;
+  margin-top: -40px;
 }
 
 footer a, footer a:visited { color: #0A6567; }
@@ -1166,4 +1165,12 @@ a#imagelightbox-close:hover, a#imagelightbox-close:focus { color: #11ABB0; }
     right: 1.25em; /* 20 */
   }
 
-} 
+}
+
+/* ------------------------------------------------------------------ */
+/* Login
+/* ------------------------------------------------------------------ */
+
+.login.container{
+  margin-top: 58px;
+}

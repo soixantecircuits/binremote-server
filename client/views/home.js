@@ -13,7 +13,24 @@ Template.home.rendered = function() {
     $('.js #hero .hero-image img').addClass("animated fadeInUpBig");
     $('.js #hero .buttons a.trial').addClass("animated shake");
 
+
   });
+
+  var download_link = '';
+  if (navigator.platform == "MacIntel"){
+    download_link = '/archives/mac.zip';
+  }
+  else if (navigator.platform == "Linux x86_64"){
+    download_link = '/archives/linux64.zip';
+  }
+  else if (navigator.platform == "Linux i686"){
+    download_link = '/archives/linux32.zip';
+  }
+  else{
+    download_link = '/archives/mac.zip';
+  }
+  $('.action .button').attr('href', download_link);
+  $('.download-icon').attr('href', download_link);
 
   setTimeout(function(){
     $("#status, #preloader").fadeOut();
