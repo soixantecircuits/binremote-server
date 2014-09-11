@@ -231,24 +231,24 @@ ul#nav li.current a { color: #fff; }
   font-weight: 600;
 }
 #hero .login{
+  opacity: 0;
   color: #fff;
   font-weight: 700;
   font-size: 15px;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  -o-animation-delay: 1s;
   /*text-shadow: 0px 1px 4px rgba(0, 0, 0, .2);*/
 }
 #hero .login:hover{
   color: #23292F;
 }
 #hero .buttons .trial {
+  opacity: 0;
   background: #f64b39;
   margin-right: 30px;
   color: #23292F;
-  -webkit-animation-delay: 10s;
-  -moz-animation-delay: 10s;
-  -ms-animation-delay: 10s;
-  -o-animation-delay: 10s;
-  -webkit-animation-iteration-count: 3;
-  -moz-animation-iteration-count: 3;
 
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -269,6 +269,7 @@ ul#nav li.current a { color: #fff; }
   background-color: #3d4145;
 }
 #hero .buttons .learn-more {
+  opacity: 0;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; /* border radius */
@@ -295,6 +296,8 @@ ul#nav li.current a { color: #fff; }
 /* ------------------------------------------------------------------ */
 
 #header-illustration{
+  opacity: 0;
+  pointer-events:none;
   height: 356px;
   margin-top: -150px;
   background: url(images/home/illu_header_sitepromo.png) no-repeat center bottom;
@@ -327,10 +330,12 @@ ul#nav li.current a { color: #fff; }
 #features .right {
   padding-left: 32px;
   float: right;
+  opacity: 0;
 }
 #features .left {
   padding-right: 32px;
   float: left;
+  opacity: 0;
 }
 #features h3 {
   font: 16px/24px 'Source Sans Pro', sans-serif;
@@ -615,22 +620,20 @@ ul.features li:nth-child(even) { }
 #call-to-action .download-icon:hover{
   background-color: #475763;
 }
-#call-to-action .download-icon:after{
-  content: '';
-  height: 23px;
-  width: 20px;
-  top: 42px;
-  left: 76px;
-  position: absolute;
-  background: url(/images/home/download_icon.png) no-repeat center center;
-  background-size: contain;
+#call-to-action .download-icon .fa{
+  color: #ffffff;
+  margin: 0 auto;
+  font-size: 25px;
+  padding-top: 45px;
   display: block;
+  text-align: center;
+  background-color: transparent;
 }
 #call-to-action .download-icon span{
   color: #ffffff;
   margin: 0 auto;
   font-size: 25px;
-  padding-top: 70px;
+  /*padding-top: 70px;*/
   display: block;
   text-align: center;
   background-color: transparent;
@@ -888,6 +891,7 @@ footer {
   line-height: 24px;
   position: relative;
   background: #181d21;
+  opacity: 0;
 }
 
 footer .container{

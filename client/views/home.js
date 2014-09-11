@@ -3,18 +3,19 @@ Template.home.rendered = function() {
   /*---------------------------------------------------- */
   /* Preloader
    ------------------------------------------------------ */
-  $(window).load(function() {
 
-    // will first fade out the loading animation 
-//    $("#status").fadeOut("slow");
+  setTimeout(function(){
+    $('#preloader').fadeOut();
+  }, 100) ;
 
-    // will fade out the whole DIV that covers the website. 
-//    $("#preloader").delay(500).fadeOut("slow").remove();
-    $('.js #hero .hero-image img').addClass("animated fadeInUpBig");
-    $('.js #hero .buttons a.trial').addClass("animated shake");
+  setTimeout(function(){
 
-
-  });
+    $('#hero .buttons .learn-more').addClass("animated fadeInRight");
+    $('#hero .buttons .trial').addClass("animated fadeInLeft");
+    $('#hero .buttons .login').addClass("animated fadeInUp");
+    $('#header-illustration').addClass("animated fadeInUp");
+    $('footer').addClass("animated fadeIn");
+  }, 500) ;
 
   var download_link = '';
   if (navigator.platform == "MacIntel"){
@@ -32,9 +33,6 @@ Template.home.rendered = function() {
   $('.action .button').attr('href', download_link);
   $('.download-icon').attr('href', download_link);
 
-  setTimeout(function(){
-    $("#status, #preloader").fadeOut();
-  }, 1000);
 
   /*---------------------------------------------------- */
   /* Mobile Menu
@@ -147,36 +145,21 @@ Template.home.rendered = function() {
   /*----------------------------------------------------*/
   /* Waypoints Animations
    ------------------------------------------------------ */
-  $('.js .design').waypoint(function() {
-    $('.js .design .feature-media').addClass('animated pulse');
-  }, {
-    offset: 'bottom-in-view'
-  });
-
-  $('.js .responsive').waypoint(function() {
-    $('.js .responsive .feature-media').addClass('animated pulse');
-  }, {
-    offset: 'bottom-in-view'
-  });
-
-  $('.js .cross-browser').waypoint(function() {
-    $('.js .cross-browser .feature-media').addClass('animated pulse');
-  }, {
-    offset: 'bottom-in-view'
-  });
-
-  $('.js .video').waypoint(function() {
-    $('.js .video .feature-media').addClass('animated pulse');
-  }, {
-    offset: 'bottom-in-view'
-  });
-
-//  $('.js #subscribe').waypoint(function() {
-//    $('.js #subscribe input[type="email"]').addClass('animated fadeInLeftBig show');
-//    $('.js #subscribe input[type="submit"]').addClass('animated fadeInRightBig show');
-//  }, {
-//    offset: 'bottom-in-view'
-//  });
+  function waypointAnimated(className, animation, offset){
+    $(className).waypoint(function() {
+      $(className).addClass('animated ' + animation);
+    }, {
+      offset: offset
+    });
+  }
+  waypointAnimated('.js .design .left', 'fadeInLeft', 'bottom-in-view');
+  waypointAnimated('.js .design .right', 'fadeInRight', 'bottom-in-view');
+  waypointAnimated('.js .responsive .left', 'fadeInLeft', 'bottom-in-view');
+  waypointAnimated('.js .responsive .right', 'fadeInRight', 'bottom-in-view');
+  waypointAnimated('.js .cross-browser .left', 'fadeInLeft', 'bottom-in-view');
+  waypointAnimated('.js .cross-browser .right', 'fadeInRight', 'bottom-in-view');
+  waypointAnimated('.js .video .left', 'fadeInLeft', 'bottom-in-view');
+  waypointAnimated('.js .video .right', 'fadeInRight', 'bottom-in-view');
 
 
   /*----------------------------------------------------*/

@@ -44,18 +44,9 @@ d. Default Styles
   left: 0;
   right: 0;
   bottom: 0;
-  background: #fff;
+  background: #000000;
   z-index: 99999;
   height: 100%;
-}
-#status  {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 64px;
-  height: 64px;
-  margin: -32px 0 0 -32px;
-  padding: 0;
 }
 
 /* ------------------------------------------------------------------
