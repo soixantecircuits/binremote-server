@@ -8,21 +8,31 @@ Template.home.rendered = function() {
     $('footer').addClass("animated fadeIn");
   }, 500) ;
 
-  var download_link = '';
+  var download_link = '',
+    download_logo = '';
   if (navigator.platform == "MacIntel"){
     download_link = '/archives/mac.zip';
+    download_logo = 'fa-apple';
   }
   else if (navigator.platform == "Linux x86_64"){
     download_link = '/archives/linux64.zip';
+    download_logo = 'fa-linux';
   }
   else if (navigator.platform == "Linux i686"){
     download_link = '/archives/linux32.zip';
+    download_logo = 'fa-linux';
+  }
+  else if (navigator.platform == "Win32"){
+    download_link = '/archives/windows.zip';
+    download_logo = 'fa-windows';
   }
   else{
     download_link = '/archives/mac.zip';
+    download_logo = 'fa-apple';
   }
   $('.action .button').attr('href', download_link);
   $('.download-icon').attr('href', download_link);
+  $('.download-icon i').removeClass('fa-apple fa-windows fa-linux').addClass(download_logo);
 
 
   /*---------------------------------------------------- */
