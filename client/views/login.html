@@ -1,40 +1,44 @@
 <template name="login">
-{{> menu}}
+  {{> menu}}
   <div class="login container">
-    <h3>Signin to the playa</h3>
-    <form id="login-form" action="action">
-      <div>
-        <input type="text" name="login-id" placeholder="Votre email"/>
-        <input type="password" name="login-password" placeholder="Votre mot de passe"/>
-        <input type="submit" id="login-button" value="Se connecter" />
-     </div>
-     <br>
-     <p><a href="/forgot">I forgot my pass to the playa... </a></p>
-     <div class="alert">
-		<div class="alert-warning"></div>
-		<div class="alert-success">
-		</div>    
-		<br>
-		<div id="circular3dG" class="hide">
-				<div id="circular3d_1G" class="circular3dG">
-				</div>
-				<div id="circular3d_2G" class="circular3dG">
-				</div>
-				<div id="circular3d_3G" class="circular3dG">
-				</div>
-				<div id="circular3d_4G" class="circular3dG">
-				</div>
-				<div id="circular3d_5G" class="circular3dG">
-				</div>
-				<div id="circular3d_6G" class="circular3dG">
-				</div>
-				<div id="circular3d_7G" class="circular3dG">
-				</div>
-				<div id="circular3d_8G" class="circular3dG">
-				</div>
-			</div> 	
-     	</div>
-   </form>
-   <p>Don't have an account for the playa ?? Seriously ? <a href="/signup">Dot it right now !</a></p>
+    <div class="main-window signup" >
+      <div class="login-bg"></div>
+      <form id="login-form" action="action" class="vertical-forms signform" role="form" >
+        <div >
+          <input type='email' name="login-id" placeholder="Email adress" autofocus required/>
+          <span class="validation-icon"></span>
+        </div>
+        <div >
+          <input type='password' required name="login-password" placeholder="Password"/>
+          <span class="validation-icon"></span>
+        </div>
+        <button type="submit" id="login-button" class="btn signform-submit">Sign in</button>
+        <p class="info">Or <a href="/login">create an accout</a>.</p>
+        <div class="alert">
+          <div class="alert-warning"></div>
+          <div class="alert-success">
+          </div>
+          <br>
+          <div id="circular3dG" class="hide">
+            <div id="circular3d_1G" class="circular3dG">
+            </div>
+            <div id="circular3d_2G" class="circular3dG">
+            </div>
+            <div id="circular3d_3G" class="circular3dG">
+            </div>
+            <div id="circular3d_4G" class="circular3dG">
+            </div>
+            <div id="circular3d_5G" class="circular3dG">
+            </div>
+            <div id="circular3d_6G" class="circular3dG">
+            </div>
+            <div id="circular3d_7G" class="circular3dG">
+            </div>
+            <div id="circular3d_8G" class="circular3dG">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </template>

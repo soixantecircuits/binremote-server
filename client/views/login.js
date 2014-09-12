@@ -1,7 +1,6 @@
 Template.login.events({
   'submit #login-form': function(e, t) {
     e.preventDefault();
-
     var user = $(e.target).serializeJSON();
     var logs = '';
     // If validation passes, supply the appropriate fields to the
