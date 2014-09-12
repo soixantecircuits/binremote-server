@@ -1,8 +1,8 @@
 Template.home.rendered = function() {
   setTimeout(function(){
 
-    $('#hero .buttons .learn-more').addClass("animated fadeInRight");
-    $('#hero .buttons .trial').addClass("animated fadeInLeft");
+    $('#hero .buttons .learn-more').addClass("animated fadeInLeft");
+    $('#hero .buttons .trial').addClass("animated fadeInRight");
     $('#hero .buttons .login').addClass("animated fadeInUp");
     $('#header-illustration').addClass("animated fadeInUp");
 
